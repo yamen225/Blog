@@ -19,7 +19,7 @@ const handleEvents = ( type, data ) => {
     const post = posts[postId];
     post.comments.push( { id, content, status } );
   }
-  if ( type == 'CommentUpdated' ) {
+  if ( type === 'CommentUpdated' ) {
     const { postId, id, status, content } = data;
     const post = posts[postId];
     const comment = post.comments.find( comment => {
